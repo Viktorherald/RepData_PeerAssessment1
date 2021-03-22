@@ -36,7 +36,6 @@ df <- df %>%
 
 str(df)
 ```
-Factor level looks correct, as there are 12 5-minutes interval in an hour, multiplied by 24 will get 288.
 
 ---
 

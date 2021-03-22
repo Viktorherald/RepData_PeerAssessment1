@@ -66,7 +66,6 @@ str(df)
 ##  $ date    : Date, format: "2012-10-01" "2012-10-01" ...
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...
 ```
-Factor level looks correct, as there are 12 5-minutes interval in an hour, multiplied by 24 will get 288.
 
 ---
 
@@ -207,6 +206,7 @@ plot1 <- ggplot(result_steps_sum, aes(steps)) +
             ylab("Frequency") +
             ggtitle("Dataset with NAs")
 
+## Plot with NA values replaced
 plot2<- ggplot(result2_steps_sum, aes(steps)) + 
             geom_histogram(color = "black", fill = "coral", binwidth = 1000) +
             ylim(0, 16) +
@@ -283,3 +283,4 @@ From the chart, there are few notable points:
 * The spikes around 8am is greater than those in weekends.
 * 6am to 8am has higher average steps for weekdays than in weekends.
 * However, throughout the afternoon and evening (12pm - 6pm) the average steps are higher in weekends than in weekdays.
+

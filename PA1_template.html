@@ -202,7 +202,6 @@ str(df)</code></pre>
 ##  $ steps   : int  NA NA NA NA NA NA NA NA NA NA ...
 ##  $ date    : Date, format: &quot;2012-10-01&quot; &quot;2012-10-01&quot; ...
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...</code></pre>
-<p>Factor level looks correct, as there are 12 5-minutes interval in an hour, multiplied by 24 will get 288.</p>
 <hr />
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level3">
@@ -285,6 +284,7 @@ plot1 &lt;- ggplot(result_steps_sum, aes(steps)) +
             ylab(&quot;Frequency&quot;) +
             ggtitle(&quot;Dataset with NAs&quot;)
 
+## Plot with NA values replaced
 plot2&lt;- ggplot(result2_steps_sum, aes(steps)) + 
             geom_histogram(color = &quot;black&quot;, fill = &quot;coral&quot;, binwidth = 1000) +
             ylim(0, 16) +
